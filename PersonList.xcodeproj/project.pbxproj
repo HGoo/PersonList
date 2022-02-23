@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		DD28750E27C57C6400F076B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28750D27C57C6400F076B2 /* AppDelegate.swift */; };
 		DD28751027C57C6400F076B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28750F27C57C6400F076B2 /* SceneDelegate.swift */; };
-		DD28751227C57C6400F076B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28751127C57C6400F076B2 /* ViewController.swift */; };
 		DD28751527C57C6400F076B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD28751327C57C6400F076B2 /* Main.storyboard */; };
 		DD28751727C57C6500F076B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD28751627C57C6500F076B2 /* Assets.xcassets */; };
 		DD28751A27C57C6500F076B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD28751827C57C6500F076B2 /* LaunchScreen.storyboard */; };
+		DD28752F27C57F7600F076B2 /* PersonalListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28752E27C57F7600F076B2 /* PersonalListViewController.swift */; };
+		DD28753127C5827600F076B2 /* DetailPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753027C5827600F076B2 /* DetailPersonViewController.swift */; };
+		DD28753327C583FB00F076B2 /* OnlyPersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753227C583FB00F076B2 /* OnlyPersonListViewController.swift */; };
+		DD28753527C586AA00F076B2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753427C586AA00F076B2 /* Person.swift */; };
+		DD28753827C69A5800F076B2 /* FullName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753727C69A5800F076B2 /* FullName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD28750A27C57C6400F076B2 /* PersonList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD28750D27C57C6400F076B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD28750F27C57C6400F076B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DD28751127C57C6400F076B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD28751427C57C6400F076B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD28751627C57C6500F076B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD28751927C57C6500F076B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD28751B27C57C6500F076B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD28752E27C57F7600F076B2 /* PersonalListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalListViewController.swift; sourceTree = "<group>"; };
+		DD28753027C5827600F076B2 /* DetailPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonViewController.swift; sourceTree = "<group>"; };
+		DD28753227C583FB00F076B2 /* OnlyPersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyPersonListViewController.swift; sourceTree = "<group>"; };
+		DD28753427C586AA00F076B2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		DD28753727C69A5800F076B2 /* FullName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		DD28750C27C57C6400F076B2 /* PersonList */ = {
 			isa = PBXGroup;
 			children = (
-				DD28750D27C57C6400F076B2 /* AppDelegate.swift */,
-				DD28750F27C57C6400F076B2 /* SceneDelegate.swift */,
-				DD28751127C57C6400F076B2 /* ViewController.swift */,
-				DD28751327C57C6400F076B2 /* Main.storyboard */,
-				DD28751627C57C6500F076B2 /* Assets.xcassets */,
-				DD28751827C57C6500F076B2 /* LaunchScreen.storyboard */,
 				DD28751B27C57C6500F076B2 /* Info.plist */,
+				DD28752327C57C9E00F076B2 /* Supporting file */,
+				DD28752427C57CC800F076B2 /* Resourses */,
+				DD28752927C57DAA00F076B2 /* Model */,
+				DD28752527C57D0300F076B2 /* View */,
+				DD28752627C57D1400F076B2 /* Controller */,
 			);
 			path = PersonList;
+			sourceTree = "<group>";
+		};
+		DD28752327C57C9E00F076B2 /* Supporting file */ = {
+			isa = PBXGroup;
+			children = (
+				DD28750D27C57C6400F076B2 /* AppDelegate.swift */,
+				DD28750F27C57C6400F076B2 /* SceneDelegate.swift */,
+			);
+			path = "Supporting file";
+			sourceTree = "<group>";
+		};
+		DD28752427C57CC800F076B2 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				DD28751627C57C6500F076B2 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		DD28752527C57D0300F076B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD28751327C57C6400F076B2 /* Main.storyboard */,
+				DD28751827C57C6500F076B2 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD28752627C57D1400F076B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD28752E27C57F7600F076B2 /* PersonalListViewController.swift */,
+				DD28753027C5827600F076B2 /* DetailPersonViewController.swift */,
+				DD28753227C583FB00F076B2 /* OnlyPersonListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD28752927C57DAA00F076B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DD28753427C586AA00F076B2 /* Person.swift */,
+				DD28753727C69A5800F076B2 /* FullName.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD28751227C57C6400F076B2 /* ViewController.swift in Sources */,
+				DD28753527C586AA00F076B2 /* Person.swift in Sources */,
+				DD28753127C5827600F076B2 /* DetailPersonViewController.swift in Sources */,
+				DD28753827C69A5800F076B2 /* FullName.swift in Sources */,
+				DD28752F27C57F7600F076B2 /* PersonalListViewController.swift in Sources */,
 				DD28750E27C57C6400F076B2 /* AppDelegate.swift in Sources */,
 				DD28751027C57C6400F076B2 /* SceneDelegate.swift in Sources */,
+				DD28753327C583FB00F076B2 /* OnlyPersonListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
