@@ -10,14 +10,13 @@ import UIKit
 class OnlyPersonListViewController: UITableViewController {
     
     // MARK: - Publick Properties
-    var persons = Person.info()
-    var currentSection: Int!
+    var persons = Person.getpersons()
     
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return persons.fullName.count
+        return persons.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,20 +24,19 @@ class OnlyPersonListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        currentSection = section
-        return  persons.fullName[section]
+        let person = persons[section]
+        return  person.fullName
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "onlyPersonList", for: indexPath)
         
+        let person = persons[indexPath.section]
+        
         var content = cell.defaultContentConfiguration()
-        if indexPath.row.isMultiple(of: 2) {
-            content.text = persons.email[currentSection]
-        } else {
-            content.text = persons.phoneNumber[currentSection]
-        }
+        content.text = indexPath.row == 0 ? person.email : person.phoneNumber
+    
         cell.contentConfiguration = content
         
         return cell

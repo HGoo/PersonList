@@ -6,45 +6,55 @@
 //
 
 struct Person {
-    var fullName: [String]
-    var email: [String]
-    var phoneNumber: [String]
+    let fullName: String
+    let email: String
+    let phoneNumber: String
 }
 
 extension Person {
-    static func info() -> Person {
-        return Person(fullName: genFullName(),
-                       email: genEmail(),
-                       phoneNumber: genPhoneNumber())
+    
+    static func getpersons() -> [Person] {
+        let data = DataForRandomPerson.shared.name
+        var persons: [Person] = []
         
+        let fullName = genFullName()
+        let mail = genEmail()
+        let phone = genPhoneNumber()
+        
+        for index in 0..<data.count {
+            persons.append(Person(fullName: fullName[index],
+                                  email: mail[index],
+                                  phoneNumber: phone[index]))
+        }
+        return persons
     }
     
     static func genFullName() -> [String] {
-        let fullName = DataForRandomPerson()
-        var fullNameArray: [String] = []
+        let data = DataForRandomPerson.shared
+        var fullName: [String] = []
         
-        for indexArray in 0..<fullName.name.count {
-            if !fullName.name.isEmpty, !fullName.surName.isEmpty {
+        for indexArray in 0..<data.name.count{
+            if !data.name.isEmpty, !data.surName.isEmpty {
                 
-                let currentName = fullName.name[indexArray]
-                let currentSurName = fullName.surName.randomElement() ?? "Noname"
+                let currentName = data.name[indexArray]
+                let currentSurName = data.surName.randomElement() ?? "Noname"
                 
-                fullNameArray.append("\(currentName) \(currentSurName)")
+                fullName.append("\(currentName) \(currentSurName)")
             }
         }
-        return fullNameArray
+        return fullName
     }
     
     static func genEmail() -> [String] {
-        let dataMail = DataForRandomPerson()
+        let data = DataForRandomPerson.shared
         var email: [String] = []
-
-        for _ in 0..<dataMail.name.count {
+        
+        for _ in 0..<data.name.count {
             let randomCountString = Int.random(in: 5...12)
             var character = ""
-            let domenMail = dataMail.domen.randomElement() ?? "?"
+            let domenMail = data.domen.randomElement() ?? "?"
             for _ in 1...randomCountString {
-                let char = dataMail.letters.randomElement() ?? "?"
+                let char = data.letters.randomElement() ?? "?"
                 character += String(char)
             }
             email.append("\(character)\(domenMail)")
@@ -53,7 +63,7 @@ extension Person {
     }
     
     static func genPhoneNumber() -> [String] {
-        let data = DataForRandomPerson()
+        let data = DataForRandomPerson.shared
         var phoneNumber: [String] = []
         
         for _ in 0..<data.name.count {

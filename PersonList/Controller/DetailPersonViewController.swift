@@ -16,14 +16,13 @@ class DetailPersonViewController: UIViewController {
     
     
     // MARK: - Publick Properties
-    var indexPath: Int!
-    var persons: Person!
+    var person: Person!
         
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullName.text = persons.fullName[indexPath]
-        phoneNumber.text = persons.phoneNumber[indexPath]
-        email.text = persons.email[indexPath]
+        fullName.text = person.fullName
+        phoneNumber.text = person.phoneNumber
+        email.text = person.email
     }
 }

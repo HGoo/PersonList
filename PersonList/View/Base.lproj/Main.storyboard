@@ -17,15 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personList" id="vcB-ig-58b">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personList" textLabel="PMt-p2-Pnd" style="IBUITableViewCellStyleDefault" id="vcB-ig-58b">
                                 <rect key="frame" x="0.0" y="44.5" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vcB-ig-58b" id="FXV-6b-QM8">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PMt-p2-Pnd">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yyV-Ji-puc" kind="show" id="JEr-RH-Mzj"/>
+                                    <segue destination="yyV-Ji-puc" kind="show" identifier="Detail" id="JEr-RH-Mzj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -43,7 +52,6 @@
         <!--Detail Person View Controller-->
         <scene sceneID="Kh2-H0-kJX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kDS-pz-ZlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="yyV-Ji-puc" customClass="DetailPersonViewController" customModule="PersonList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y0i-xM-UKi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -88,11 +96,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="hNx-hr-L0M"/>
                     <connections>
-                        <outlet property="email" destination="ADY-vo-qTo" id="Jf2-5u-NIh"/>
-                        <outlet property="fullName" destination="GWf-Dt-FDD" id="T7g-pb-634"/>
-                        <outlet property="phoneNumber" destination="EDx-MH-iVh" id="hdG-4Y-fNl"/>
+                        <outlet property="email" destination="ADY-vo-qTo" id="IRW-tS-XOK"/>
+                        <outlet property="fullName" destination="GWf-Dt-FDD" id="bji-im-Tbr"/>
+                        <outlet property="phoneNumber" destination="EDx-MH-iVh" id="X0s-Hz-B79"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDS-pz-ZlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2522" y="108"/>
         </scene>
@@ -165,6 +174,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="X5w-nq-975" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q1W-zT-e5q">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
