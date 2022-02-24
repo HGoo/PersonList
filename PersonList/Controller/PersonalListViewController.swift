@@ -36,8 +36,12 @@ class PersonalListViewController: UITableViewController {
             let detailPersonVC = segue.destination as! DetailPersonViewController
             detailPersonVC.indexPath = indexPath.row
             detailPersonVC.persons = persons
+            
+        }
+        
+        if tabBarItem.tag == 1 {
+            let onlyPersonVC = segue.destination as! OnlyPersonListViewController
+            onlyPersonVC.persons = persons
         }
     }
-    
-
 }
