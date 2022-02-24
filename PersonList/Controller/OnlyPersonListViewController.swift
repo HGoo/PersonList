@@ -9,6 +9,10 @@ import UIKit
 
 class OnlyPersonListViewController: UITableViewController {
 
+    // MARK: - Publick Properties
+    var persons = Person.info()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

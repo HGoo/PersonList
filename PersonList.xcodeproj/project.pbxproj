@@ -16,7 +16,7 @@
 		DD28753127C5827600F076B2 /* DetailPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753027C5827600F076B2 /* DetailPersonViewController.swift */; };
 		DD28753327C583FB00F076B2 /* OnlyPersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753227C583FB00F076B2 /* OnlyPersonListViewController.swift */; };
 		DD28753527C586AA00F076B2 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753427C586AA00F076B2 /* Person.swift */; };
-		DD28753827C69A5800F076B2 /* FullName.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753727C69A5800F076B2 /* FullName.swift */; };
+		DD28753A27C6A8A700F076B2 /* DataForRandomPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD28753927C6A8A700F076B2 /* DataForRandomPerson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		DD28753027C5827600F076B2 /* DetailPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonViewController.swift; sourceTree = "<group>"; };
 		DD28753227C583FB00F076B2 /* OnlyPersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyPersonListViewController.swift; sourceTree = "<group>"; };
 		DD28753427C586AA00F076B2 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		DD28753727C69A5800F076B2 /* FullName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullName.swift; sourceTree = "<group>"; };
+		DD28753927C6A8A700F076B2 /* DataForRandomPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataForRandomPerson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DD28753427C586AA00F076B2 /* Person.swift */,
-				DD28753727C69A5800F076B2 /* FullName.swift */,
+				DD28753927C6A8A700F076B2 /* DataForRandomPerson.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,11 +192,11 @@
 			files = (
 				DD28753527C586AA00F076B2 /* Person.swift in Sources */,
 				DD28753127C5827600F076B2 /* DetailPersonViewController.swift in Sources */,
-				DD28753827C69A5800F076B2 /* FullName.swift in Sources */,
 				DD28752F27C57F7600F076B2 /* PersonalListViewController.swift in Sources */,
 				DD28750E27C57C6400F076B2 /* AppDelegate.swift in Sources */,
 				DD28751027C57C6400F076B2 /* SceneDelegate.swift in Sources */,
 				DD28753327C583FB00F076B2 /* OnlyPersonListViewController.swift in Sources */,
+				DD28753A27C6A8A700F076B2 /* DataForRandomPerson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

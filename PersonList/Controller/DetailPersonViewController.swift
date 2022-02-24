@@ -9,21 +9,21 @@ import UIKit
 
 class DetailPersonViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    @IBOutlet var fullName: UILabel!
+    @IBOutlet var phoneNumber: UILabel!
+    @IBOutlet var email: UILabel!
+    
+    
+    // MARK: - Publick Properties
+    var indexPath: Int!
+    var persons: Person!
+        
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        fullName.text = persons.fullName[indexPath]
+        phoneNumber.text = persons.phoneNumber[indexPath]
+        email.text = persons.email[indexPath]
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
